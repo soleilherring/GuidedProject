@@ -1,6 +1,6 @@
 ﻿using System;
 
-// initialize variables - graded assignments 
+// Initialize variables - graded assignments 
 int currentAssignments = 5;
 
 int[] sophiaScores = new int[] {90, 86, 87, 98, 100};
@@ -10,8 +10,11 @@ int[] loganScores = new int[] {90, 95, 87, 88, 96};
 
 string[] studentNames = new string[] {"Sophia", "Andrew", "Emma", "Logan"};
 
-// create an integer array with student scores
+// Create an integer array with student scores
 int[] studentScores = new int[10];
+
+// Write the Report Header to the console
+Console.WriteLine("Student\t\tGrade\n");
 
 foreach (string name in studentNames)
 {
@@ -25,22 +28,21 @@ foreach (string name in studentNames)
         studentScores = emmaScores;
     else studentScores = loganScores;
 
-    // initialize/reset the sume of scored assignments
+    // Initialize/reset the sume of scored assignments
     int sumAssignmentScores = 0;
 
-    // initialize/reset the calculated average of exam and extr credit score
+    // Initialize/reset the calculated average of exam and extr credit score
     decimal currentStudentGrade = 0;
 
     foreach (int score in studentScores)
     {
-        // add the exam score to the sum
+        // Add the exam score to the sum
         sumAssignmentScores +=score;
     }
 
     currentStudentGrade = (decimal)sumAssignmentScores/ currentAssignments;
 
-    Console.WriteLine("Student\t\tGrade\n");
-    Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+    Console.WriteLine($"{currentStudent}:\t\t{currentStudentGrade}\t");
     
 }
 
